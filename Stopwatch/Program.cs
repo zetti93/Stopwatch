@@ -1,3 +1,30 @@
-﻿// See https://aka.ms/new-console-template for more information
+﻿using System;
+using System.Threading;
 
-Console.WriteLine("Hello, World!");
+namespace Stopwatch
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Start();
+        }
+
+        static void Start()
+        {
+            var time = 10;
+            var currentTime = 0;
+
+            while (currentTime != time)
+            {
+                Console.Clear();
+
+                currentTime++;
+
+                Console.WriteLine(currentTime);
+
+                Thread.Sleep(1000);
+            }
+        }
+    }
+}
